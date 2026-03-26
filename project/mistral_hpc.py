@@ -35,6 +35,15 @@ If no entities exist, return an empty list.
 There can be more than one label per entity.
 Return ONLY valid JSON.
 
+Example input sentences:
+"Some text about COVID-19."
+Example output format:
+{
+    "entity": "COVID-19",
+    "labels": ["T005", "T033"]
+    "offsets": [[16, 23]]
+}
+
 Sentences:
 {sentences}
 """
