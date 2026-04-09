@@ -9,31 +9,37 @@ def build_prompt(batch):
 You are an expert Named Entity Recognition (NER) system.
 
 Extract entities from each sentence using these labels from PubMed:
-T005: Virus (level 4)
-T007: Bacterium (level 4)
-T017: Anatomical Structure (level 3)
-T022: Body System (level 5)
-T031: Body Substance (level 4)
-T033: Finding (level 3)
-T037: Injury or Poisoning (level 3)
-T038: Biologic Function (level 4)
-T058: Health Care Activity (level 4)
-T062: Research Activity (level 4)
-T074: Medical Device (level 4)
-T082: Spatial Concept (level 4)
-T091: Biomedical Occupation or Discipline (level 4)
-T092: Organization (level 3)
-T097: Professional or Occupational Group (level 4)
-T098: Population Group (level 4)
-T103: Chemical (level 4)
-T168: Food (level 4)
-T170: Intellectual Product (level 3)
-T201: Clinical Attribute (level 4)
-T204: Eukaryote (level 4)
+T005: Virus
+T007: Bacterium
+T017: Anatomical Structure
+T022: Body System
+T031: Body Substance
+T033: Finding
+T037: Injury or Poisoning
+T038: Biologic Function
+T058: Health Care Activity
+T062: Research Activity
+T074: Medical Device
+T082: Spatial Concept
+T091: Biomedical Occupation or Discipline
+T092: Organization
+T097: Professional or Occupational Group
+T098: Population Group
+T103: Chemical
+T168: Food
+T170: Intellectual Product
+T201: Clinical Attribute
+T204: Eukaryote
+
+Return ONLY valid JSON.
+Return a JSON array of entities found in the text.
+
+Each entity must have:
+- "entity": string
+- "labels": list of label codes
+- "offsets": list of [start, end]
 
 If no entities exist, return an empty list.
-There can be more than one label per entity.
-Return ONLY valid JSON.
 
 Example input sentences:
 "Some text about COVID-19."
@@ -81,7 +87,7 @@ def main():
         text.append({"pmid": pmid, "text": combined_text})
 
     # --- batching ---
-    batch_size = 5
+    batch_size = 1
     all_responses = []
 
     for i in range(0, len(text), batch_size):
@@ -98,8 +104,11 @@ def main():
             max_new_tokens=1024,
             temperature=0
         )
-        response = tokenizer.decode(outputs[0], skip_special_tokens=True)
-        print("Response snippet:", response[:200])
+        response = tokenizer.decode(
+        outputs[0][inputs["input_ids"].shape[1]:],
+        skip_special_tokens=True
+        )
+        print("Response snippet:", response[:50])
 
         # store same response for each PMID (you can split later if needed)
         for pmid in batch_pmids:
