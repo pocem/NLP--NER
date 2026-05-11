@@ -1,0 +1,14 @@
+[
+  {
+    "pmid": "25847295",
+    "raw_output": "[\n  {\n    \"entity\": \"Nonylphenol diethoxylate\",\n    \"labels\": [\"T109\"]\n  },\n  {\n    \"entity\": \"apoptosis\",\n    \"labels\": [\"T047\"]\n  },\n  {\n    \"entity\": \"PC12 cells\",\n    \"labels\": [\"T123\", \"T114\"]\n  },\n  {\n    \"entity\": \"nonylphenol\",\n    \"labels\": [\"T109\"]\n  },\n  {\n    \"entity\": \"NP2 EO\",\n    \"labels\": [\"T109\"]\n  },\n  {\n    \"entity\": \"copper\",\n    \"labels\": [\"T116\"]\n  },\n  {\n    \"entity\": \"serum\",\n    \"labels\": [\"T059\"]\n  },\n  {\n    \"entity\": \"DNA\",\n    \"labels\": [\"T028\"]\n  },\n  {\n    \"entity\": \"cytochrome c\",\n    \"labels\": [\"T116\"]\n  },\n  {\n    \"entity\": \"Bax\",\n    \"labels\": [\"T116\"]\n  }\n]"
+  },
+  {
+    "pmid": "26876532",
+    "raw_output": "[\n  {\n    \"entity\": \"EZH2\",\n    \"labels\": [\"T116\"]\n  },\n  {\n    \"entity\": \"ZFX\",\n    \"labels\": [\"T116\"]\n  },\n  {\n    \"entity\": \"MEN1\",\n    \"labels\": [\"T116\"]\n  },\n  {\n    \"entity\": \"CTNNB1\",\n    \"labels\": [\"T116\"]\n  },\n  {\n    \"entity\": \"CDKIs\",\n    \"labels\": [\"T116\"]\n  },\n  {\n    \"entity\": \"parathyroid neoplasms\",\n    \"labels\": [\"T191\"]\n  },\n  {\n    \"entity\": \"parathyroid adenoma\",\n    \"labels\": [\"T191\"]\n  },\n  {\n    \"entity\": \"parathyroid carcinomas\",\n    \"labels\": [\"T191\"]\n  },\n  {\n    \"entity\": \"parathyroid tumour\",\n    \"labels\": [\"T191\"]\n  },\n  {\n    \"entity\": \"ovary malignant tumours\",\n    \"labels\": [\"T191\"]\n  },\n  {\n    \"entity\": \"blood\",\n    \"labels\": [\"T059\"]\n  },\n  {\n    \"entity\": \"DNA\",\n    \"labels\": [\"T058\"]\n  },\n  {\n    \"entity\": \"PCR\",\n    \"labels\": [\"T058\"]\n  },\n  {\n    \"entity\": \"hyperparathyroidism\",\n    \"labels\": [\"T047\"]\n  }\n]"
+  },
+  {
+    "pmid": "27059693",
+    "raw_output": "[\n  {\n    \"entity\": \"Rheumatoid Arthritis\",\n    \"labels\": [\"T047\"]\n  },\n  {\n    \"entity\": \"Medline\",\n    \"labels\": [\"T054\"]\n  },\n  {\n    \"entity\": \"Embase\",\n    \"labels\": [\"T054\"]\n  },\n  {\n    \"entity\": \"pain\",\n    \"labels\": [\"T033\"]\n  },\n  {\n    \"entity\": \"functional incapacity\",\n    \"labels\": [\"T033\"]\n  },\n  {\n    \"entity\": \"joint counts\",\n    \"labels\": [\"T033\"]\n  },\n  {\n    \"entity\": \"acute-phase reactants\",\n    \"labels\": [\"T059\"]\n  }\n]"
+  }
+]
