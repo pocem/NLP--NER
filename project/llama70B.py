@@ -116,7 +116,7 @@ def main():
     # ---------------- LOAD DATA ----------------
 
     with open("./Segmenting/test.json", "r", encoding="utf-8") as f:
-        data = json.load(f)[:3]
+        data = json.load(f)
 
     # ---------------- PREPROCESS ----------------
 
@@ -226,7 +226,7 @@ def main():
 
     output_path = os.path.join(
         out_dir,
-        "llama70B.json"
+        "llama70B_fewshot.json"
     )
 
     with open(output_path, "w", encoding="utf-8") as f:
